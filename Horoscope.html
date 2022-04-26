@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Fav-Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+  <!-- Font-awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Horoscope</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/Horoscope.css">
+</head>
+
+<style>
+  body {
+    overflow-x: hidden;
+  }
+
+  .zodiac-signs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 265vh;
+    color: aliceblue;
+    background-image: url(./Images/13.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.454);
+    background-blend-mode: color;
+    letter-spacing: 1px;
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+  }
+
+  .sign {
+    cursor: pointer;
+    color: aliceblue;
+    background-color: rgba(46, 114, 129, 0.071);
+    border: 8px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 3rem;
+    box-shadow: 8px 8px 25px rgba(255, 255, 255, 0.76);
+    transition: ease-in 0.3s;
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .sign:hover {
+    background-color: rgba(50, 154, 175, 0.758);
+  }
+
+  .sign img {
+    margin-top: 4rem;
+    height: 180px;
+    width: 160px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1300px) {
+    .zodiac-signs {
+      height: auto;
+    }
+  }
+
+  @media (max-width: 470px) {
+    .sign {
+      height: 14rem;
+      width: 18rem;
+      font-size: 0.6rem;
+    }
+
+    .sign img {
+      margin-top: 2rem;
+      height: 150px;
+      width: 130px;
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><img class="site_logo" src="./Images/logo.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Horoscope</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Predictions.html">Predictions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Ask Questions.html">Ask a Question!</a>
+          </li>
+          <div class="loginContainer">
+            <button class="loginBtn"> <a href="./Sign up.html">Sign up</a> </button>
+          </div>
+      </div>
+    </div>
+  </nav>
+  <div class="zodiac-signs">
+    <marquee direction="left" style="margin-top:2rem;">
+      YOU CAN READ YOUR HOROSCOPE.
+      <br>
+      JUST CLICK ON YOUR ZODIAC SIGN.
+    </marquee>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Aries.png" alt="">
+
+      <p>(March 21 - April 19)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Taurus.png" alt="">
+
+      <p>(April 20 – May 20)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Gemini.png" alt="">
+
+      <p>(May 21 – June 20)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Cancer.png" alt="">
+
+      <p>(June 21 – July 22)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Leo.png" alt="">
+
+      <p>(July 23 – August 22)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Virgo.png" alt="">
+
+      <p>(August 23 – September 22)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Libra.png" alt="">
+
+      <p>(September 23 – October 22)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Scorpio.png" alt="">
+
+      <p>(October 23 – November 21)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Sagittarius.png" alt="">
+
+      <p>(November 22 - December 21)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Capricorn.png" alt="">
+
+      <p> (December 22 - January 19)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Aquarius.png" alt="">
+
+      <p>(January 20 - February 18)</p>
+    </div>
+    <div class="sign" onClick="changePage()">
+      <img src="./Images/Zodiac Signs/Pisces.png" alt="">
+
+      <p>(February 19 - March 20)</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <h5> © All rights reserved @astroDrishti</h5>
+
+    <div class="footer-text">
+      <h5>
+        <a href="#"> Contact Us : +91-7018036347</a>
+      </h5>
+      <h5><a href="./About the developers.html"> About the developers</a> </h5>
+    </div>
+    <div class="footer-btn">
+
+      <a href="./Join.html"><button class="downloadBtn">Join as Astrologer</button></a>
+      <button type="button" class="downloadBtn">
+        <i class="fa-brands fa-google-play"></i> Download our App</button>
+    </div>
+    <div class="footer-icons">
+
+      <i class="fa-brands fa-facebook fa-2x"></i>
+
+      <i class="fa-brands fa-instagram fa-2x"></i>
+
+      <i class="fa-brands fa-twitter fa-2x"></i>
+
+      <i class="fa-brands fa-whatsapp fa-2x"></i>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Redirecting to Daily and Weekly Horoscope from horoscope....
+    function changePage() {
+      window.location.href = "./Daily and weekly.html";
+    };
+  </script>
+
+</body>
+
+</html>

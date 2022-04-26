@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=Quicksand:wght@300;500;600&family=Roboto:ital,wght@1,100;1,300&family=Source+Sans+Pro&family=Work+Sans:wght@200;300&display=swap");
+:root {
+  --darkblue-gradient: linear-gradient(180deg, #0c163c 0%, #040922 98.35%);
+  --blue-gradient: linear-gradient(315deg, #5495a1 0%, #5b64ab 100%);
+  --black-blue-gradient: linear-gradient(to bottom, #70c1d5e0, #c965d4eb);
+  --dark-blue: #161a4d;
+  --white: #fff;
+  --hover: #bb52bd;
+  --DrishtiColor: rgb(197, 93, 58);
+  --buttonColor: rgb(67, 160, 180);
+}
+
+/* CUSTOMIZED SCROLL-BAR */
+::-webkit-scrollbar {
+  width: 0.87rem;
+}
+::-webkit-scrollbar-track {
+  background: rgba(104, 152, 176, 0.881);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.849);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(16, 64, 84, 0.692);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 18px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+nav {
+  height: 7rem;
+  width: 100%;
+  background-color: #000000d3;
+  background-image: url(../Images/11.jpg);
+  background-blend-mode: color;
+  background-size: cover;
+  font-family: "Work sans", sans-serif;
+  font-weight: 300;
+}
+
+.site_logo {
+  margin-left: 1rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  cursor: pointer;
+}
+.navbar-nav {
+  margin-left: 7rem;
+}
+.nav-link {
+  letter-spacing: 1.3px;
+  margin-left: 4rem;
+  text-decoration: none;
+  color: white;
+  transition: ease-in 0.2s;
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    rgb(92, 218, 240),
+    rgb(68, 141, 230)
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 300ms;
+}
+.nav-link:hover {
+  color: rgb(129, 228, 255);
+  background-size: 100% 100%;
+  background-position-x: left;
+}
+.active {
+  color: rgb(129, 228, 255);
+}
+.fa-solid {
+  color: white;
+}
+
+.navbar-nav {
+  z-index: 2;
+  position: relative;
+  background-color: #0000007e;
+  margin-top: 0.5rem;
+  border-radius: 10px;
+  float: right;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: auto;
+}
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 0.25rem;
+  transition: box-shadow 0.15s ease-in-out;
+}
+.fa-bars {
+  color: rgb(184, 114, 35);
+}
+
+.second-navbar {
+  display: none;
+}
+
+.loginContainer {
+  margin-left: 4rem;
+}
+.loginBtn {
+  margin-left: 3rem;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  width: 7vw;
+  height: 4.8vh;
+  border-radius: 10px;
+  background-color: var(--buttonColor);
+  color: var(--white);
+  border: none;
+  transition: ease-in 0.2s;
+  position: relative;
+  z-index: 1;
+}
+.loginBtn a {
+  text-decoration: none;
+  color: white;
+}
+
+.loginBtn:hover {
+  background-color: var(--hover);
+  height: 5.5vh;
+}
+
+section {
+  color: white;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 1.3rem;
+  background-image: url("../Images/11.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #00000083;
+  background-blend-mode: color;
+  height: 90vh;
+  overflow-x: hidden;
+}
+section img {
+  height: 20rem;
+  width: 20rem;
+  animation: animate 27000s infinite;
+  position: relative;
+  z-index: 0;
+}
+section p {
+  color: rgb(190, 190, 190);
+}
+@keyframes animate {
+  100% {
+    transform: rotate(500000deg);
+  }
+}
+
+/* Modal CSS */
+.modal-overlay {
+  visibility: hidden;
+  z-index: -5;
+  position: fixed;
+  top: 14%;
+  left: 73%;
+  height: 46%;
+  width: 20%;
+  background: rgb(46, 18, 50);
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+.showOverlay {
+  visibility: visible;
+  z-index: 5;
+}
+.close {
+  background: none;
+  color: rgb(255, 255, 255);
+  border: none;
+  position: absolute;
+  left: 90%;
+  top: 2%;
+}
+.location-text {
+  margin-top: 3rem;
+  margin-left: 2.6rem;
+  height: 2.5rem;
+  width: 13rem;
+  border-radius: 10px;
+  border: 2px solid rgb(74, 155, 205);
+  padding: 0.5rem;
+  outline: none;
+}
+.fa-magnifying-glass {
+  color: rgb(255, 255, 255);
+  margin-left: 0.2rem;
+  border: 2px solid rgb(59, 174, 185);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.headings h6 a {
+  text-decoration: none;
+  color: white;
+}
+.headings h6 a:hover {
+  color: rgb(96, 204, 247);
+  transition: ease-in 0.3s;
+}
+
+.astrodrishti-text {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+.astrodrishti-text span {
+  color: var(--DrishtiColor);
+}
+
+.what-we-do-text {
+  text-align: justify;
+  height: auto;
+  padding: 7rem;
+  color: rgb(232, 232, 232);
+  font-size: 1.35rem;
+  background-size: cover;
+  background-color: #04092294;
+  background-blend-mode: color;
+  background-image: url(../Images/12.jpg);
+}
+.what-we-do-text span {
+  color: var(--DrishtiColor);
+}
+.what-we-do-text img {
+  height: 7rem;
+  width: 7rem;
+  margin-top: 1rem;
+}
+.logo-2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+.downloadBtn {
+  margin-top: 2.6rem;
+  width: 11vw;
+  height: 6vh;
+  border: none;
+  background-color: var(--buttonColor);
+  border-radius: 2rem;
+  color: white;
+  transition: ease-in 0.3s;
+  box-shadow: 3px 3px 20px rgba(100, 142, 172, 0.804);
+  font-size: 0.77rem;
+}
+.downloadBtn:hover {
+  background-color: var(--hover);
+}
+.planet-container {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url(../Images/23.jpg);
+  background-color: #04092296;
+  background-blend-mode: color;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+}
+.planet-container h2 {
+  color: rgb(215, 215, 215);
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.planet-container p {
+  color: rgb(215, 215, 215);
+}
+.planet-container a {
+  text-decoration: none;
+}
+.planet-text {
+  font-size: 1.3rem;
+  text-align: justify;
+  transition: all 0.8s;
+  padding: 4rem;
+  color: rgb(196, 196, 196);
+}
+
+.planet-text h3 {
+  color: rgb(24, 201, 207);
+}
+
+.planet {
+  height: 20rem;
+  width: 20rem;
+  padding: 2rem;
+  -webkit-filter: drop-shadow(12px 18px 10px rgba(125, 125, 125, 0.776));
+  filter: drop-shadow(12px 18px 10px rgba(128, 128, 128, 0.792));
+  transition: ease-in 0.3s;
+  border-radius: 40px;
+}
+.planet:hover {
+  background-color: #ffffffce;
+}
+.one {
+  text-align: center;
+}
+.one h5 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+#moon {
+  color: rgb(199, 199, 199);
+}
+#venus {
+  color: rgb(204, 157, 104);
+}
+#earth {
+  color: #3a4092;
+}
+#mars {
+  color: rgb(205, 119, 65);
+}
+#jupiter {
+  color: rgb(180, 111, 73);
+}
+#saturn {
+  color: rgb(224, 223, 165);
+}
+#uranus {
+  color: rgb(105, 195, 202);
+}
+#neptune {
+  color: rgb(77, 122, 218);
+}
+footer {
+  font-family: "Source sans pro";
+  background-color: rgb(0, 0, 0);
+  border-top: 1px solid rgb(55, 171, 192);
+  color: #fff;
+  text-align: center;
+  height: 50vh;
+  padding-top: 3rem;
+}
+.footer-text {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-text h5 {
+  padding: 0rem 2rem;
+}
+footer a {
+  text-decoration: none;
+  color: #6e6e6e;
+  transition: all 0.3s;
+}
+footer a:hover {
+  color: rgb(79, 181, 206);
+}
+.footer-icons i {
+  padding: 1.2rem;
+  transition: all 0.3s;
+  color: #ffffffdc;
+  cursor: pointer;
+}
+.footer-icons i:hover {
+  color: rgb(79, 181, 206);
+}
+.footer-btn {
+  padding: 1rem;
+}
+
+/* Media-Qureies */
+@media (max-width: 1300px) {
+  .site-logo {
+    margin-top: 2.2rem;
+  }
+  footer {
+    height: 55vh;
+  }
+}
+@media (max-width: 1245px) {
+  .loginBtn {
+    width: 7vw;
+    height: 1.7rem;
+  }
+}
+@media (max-width: 1070px) {
+  .modal-overlay {
+    top: 14%;
+    left: 75%;
+    height: 50%;
+    width: 23%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .downloadBtn {
+    font-size: 0.59rem;
+  }
+  .what-we-do-text {
+    height: auto;
+    font-size: 1rem;
+    padding: 2rem;
+  }
+  .planet-container {
+    padding: 2rem;
+  }
+  .planet-text {
+    font-size: 1rem;
+  }
+  section {
+    height: auto;
+  }
+}
+
+@media (max-width: 931px) {
+  .site-logo {
+    margin-top: 3.2rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .collapse navbar-collapse {
+    color: white;
+  }
+  nav ul li {
+    margin-top: 4.5vh;
+    padding-left: 2vw;
+  }
+}
+
+@media (max-width: 822px) {
+  .site-logo {
+    margin-top: 4.2rem;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .rotating-png {
+    height: 10rem;
+    width: 10rem;
+  }
+  nav ul li {
+    margin-top: 4.5vh;
+    padding-left: 2vw;
+  }
+  .loginBtn {
+    width: 3.5rem;
+  }
+  .downloadBtn {
+    width: 10rem;
+  }
+  .modal-overlay {
+    top: 14%;
+    left: 63%;
+    height: 46%;
+    width: 35%;
+  }
+}
+
+@media (max-width: 690px) {
+  nav ul li {
+    font-size: 1rem;
+  }
+
+  .loginBtn {
+    width: 6rem;
+    height: 2.2rem;
+  }
+  .downloadBtn {
+    width: 10rem;
+  }
+  .modal-overlay {
+    top: 14%;
+    left: 63%;
+    height: 46%;
+    width: 35%;
+  }
+}
+@media (max-width: 635px) {
+  .modal-overlay {
+    top: 14%;
+    left: 57%;
+    height: 46%;
+    width: 40%;
+  }
+  body {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 618px) {
+  .loginBtn {
+    width: 5rem;
+    height: 2.2rem;
+  }
+  .downloadBtn {
+    width: 8rem;
+  }
+  section {
+    font-size: 1rem;
+  }
+  .astrodrishti-text {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 577px) {
+  nav ul li {
+    font-size: 0.8rem;
+  }
+  header {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 555px) {
+  nav ul li {
+    font-size: 0.8rem;
+  }
+
+  .navbar-nav {
+    font-size: 1rem;
+  }
+
+  .downloadBtn {
+    width: 8rem;
+    height: 3rem;
+  }
+
+  .what-we-do-text {
+    height: auto;
+  }
+  footer {
+    height: 62vh;
+  }
+}
+
+@media (max-width: 550px) {
+  section {
+    font-size: 1rem;
+  }
+  .astrodrishti-text {
+    font-size: 1.4rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 62vh;
+  }
+}
+@media (max-width: 525px) {
+  .modal-overlay {
+    top: 14%;
+    left: 47%;
+    height: 46%;
+    width: 50%;
+  }
+}
+@media (max-width: 492px) {
+  nav ul li {
+    font-size: 0.7rem;
+  }
+
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  header {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 455px) {
+  nav ul li {
+    font-size: 0.7rem;
+  }
+  section h3 {
+    font-size: 0.5rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  section {
+    font-size: 0.6rem;
+  }
+  header {
+    font-size: 1rem;
+  }
+  footer {
+    height: 62vh;
+  }
+}
+@media (max-width: 444px) {
+  section h3 {
+    font-size: 0.5rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  section {
+    font-size: 0.6rem;
+  }
+  .astrodrishti-text {
+    font-size: 0.9rem;
+  }
+  section {
+    font-size: 0.66rem;
+  }
+  footer {
+    height: 62vh;
+  }
+}
+
+@media (max-width: 436px) {
+  .astrodrishti-text {
+    font-size: 1.1rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  .loginBtn {
+    width: 3.5rem;
+    height: 1.9rem;
+  }
+  .planet-text {
+    padding: 1.5rem;
+  }
+  footer {
+    height: 62vh;
+  }
+}
+@media (max-width: 415px) {
+  .loginBtn {
+    width: 3.5rem;
+    height: 1.9rem;
+  }
+
+  .what-we-do-text {
+    height: auto;
+    font-size: 0.8rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 405px) {
+  section {
+    font-size: 0.6rem;
+  }
+  .astrodrishti-text {
+    font-size: 0.8rem;
+  }
+  .loginBtn {
+    width: 3.5rem;
+    height: 1.9rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 62vh;
+  }
+  .modal-overlay {
+    top: 14%;
+    left: 36%;
+    height: 46%;
+    width: 60%;
+  }
+}
+@media (max-width: 394px) {
+  nav ul li {
+    font-size: 0.7rem;
+    margin: auto;
+    margin-left: 0.5rem;
+  }
+
+  .loginBtn {
+    width: 3.5rem;
+    height: 1.9rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+
+  .downloadBtn {
+    width: 8rem;
+    height: 3rem;
+  }
+
+  .what-we-do-text {
+    height: auto;
+    font-size: 0.8rem;
+  }
+  section {
+    font-size: 0.8rem;
+  }
+  .astrodrishti-text {
+    font-size: 1rem;
+  }
+
+  .planet {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+@media (max-width: 386px) {
+  section {
+    font-size: 0.7rem;
+  }
+  .astrodrishti-text {
+    font-size: 0.9rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  footer {
+    height: 62vh;
+  }
+}
+@media (max-width: 373px) {
+  section {
+    font-size: 0.7rem;
+  }
+  .navbar-nav {
+    font-size: 1.5rem;
+  }
+  .astrodrishti-text {
+    font-size: 0.9rem;
+  }
+}
