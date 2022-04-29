@@ -72,7 +72,7 @@ nav {
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position-x: right;
-  transition: background-size 300ms;
+  transition: background-size 450ms;
 }
 .nav-link:hover {
   color: rgb(129, 228, 255);
