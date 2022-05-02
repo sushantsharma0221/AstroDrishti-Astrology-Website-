@@ -89,7 +89,7 @@ nav {
 .navbar-nav {
   z-index: 2;
   position: relative;
-  background-color: #0000007e;
+  background-color: #00000000;
   margin-top: 0.5rem;
   border-radius: 10px;
   float: right;
@@ -437,7 +437,17 @@ footer a:hover {
     height: auto;
   }
 }
-
+@media (max-width: 992px) {
+  .navbar-nav {
+    background-color: rgba(3, 32, 42, 0.744);
+  }
+  .nav-item {
+    transform: translateX(-30px);
+  }
+  .loginBtn {
+    transform: translateX(-40px);
+  }
+}
 @media (max-width: 931px) {
   .site-logo {
     margin-top: 3.2rem;
@@ -445,11 +455,9 @@ footer a:hover {
     width: 3rem;
   }
   .loginBtn {
-    width: 3.5rem;
-    height: 1.9rem;
-    position: relative;
-    left: -40px;
+    transform: translateX(-30px);
   }
+
   .collapse navbar-collapse {
     color: white;
   }
@@ -474,11 +482,7 @@ footer a:hover {
     margin-top: 4.5vh;
     padding-left: 2vw;
   }
-  .loginBtn {
-    position: relative;
-    width: 3.5rem;
-    left: -40px;
-  }
+
   .downloadBtn {
     width: 10rem;
   }
@@ -495,12 +499,6 @@ footer a:hover {
     font-size: 1rem;
   }
 
-  .loginBtn {
-    position: relative;
-    left: -50px;
-    width: 6rem;
-    height: 2.2rem;
-  }
   .downloadBtn {
     width: 10rem;
   }
@@ -523,10 +521,6 @@ footer a:hover {
   }
 }
 @media (max-width: 618px) {
-  .loginBtn {
-    width: 5rem;
-    height: 2.2rem;
-  }
   .downloadBtn {
     width: 8rem;
   }
@@ -650,8 +644,8 @@ footer a:hover {
     font-size: 1.5rem;
   }
   .loginBtn {
-    width: 3.5rem;
-    height: 1.9rem;
+    width: 4.5rem;
+    height: 2.5rem;
   }
   .planet-text {
     padding: 1.5rem;
