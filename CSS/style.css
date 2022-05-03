@@ -315,7 +315,9 @@ section p {
   border-radius: 40px;
 }
 .planet:hover {
-  background-color: #ffffffce;
+  transform: translateY(-10px);
+  -webkit-filter: drop-shadow(12px 18px 10px rgba(82, 82, 82, 0.776));
+  filter: drop-shadow(12px 18px 10px rgba(61, 61, 61, 0.792));
 }
 .one {
   text-align: center;
