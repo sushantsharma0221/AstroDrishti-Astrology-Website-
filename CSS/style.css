@@ -67,7 +67,7 @@ nav {
     transparent 0%,
     transparent 90%,
     rgb(92, 218, 240),
-    rgb(68, 141, 230)
+    rgb(68, 190, 230)
   );
   background-repeat: no-repeat;
   background-size: 0% 100%;
@@ -75,12 +75,12 @@ nav {
   transition: background-size 450ms;
 }
 .nav-link:hover {
-  color: rgb(129, 228, 255);
+  color: rgb(163, 235, 255);
   background-size: 100% 100%;
   background-position-x: left;
 }
 .active {
-  color: rgb(129, 228, 255);
+  color: rgb(165, 236, 255);
 }
 .fa-solid {
   color: white;
