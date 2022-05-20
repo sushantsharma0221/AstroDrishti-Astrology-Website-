@@ -631,7 +631,7 @@ footer a:hover {
     font-size: 0.9rem;
   }
   section {
-    font-size: 0.66rem;
+    font-size: 0.8rem;
   }
   footer {
     height: 62vh;
@@ -650,7 +650,7 @@ footer a:hover {
     height: 2.5rem;
   }
   .planet-text {
-    padding: 1.5rem;
+    padding: 0rem;
   }
   footer {
     height: 62vh;
