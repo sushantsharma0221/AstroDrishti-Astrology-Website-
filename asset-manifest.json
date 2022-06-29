@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/github.io/grayscale-react-website/static/css/main.256ded41.css",
+    "main.js": "/github.io/grayscale-react-website/static/js/main.29cad755.js",
+    "static/media/3.jpg": "/github.io/grayscale-react-website/static/media/3.286d09a6112f6baac9f6.jpg",
+    "static/media/17.jpg": "/github.io/grayscale-react-website/static/media/17.b46e9dc1aa51ec841f98.jpg",
+    "static/media/2.jpg": "/github.io/grayscale-react-website/static/media/2.af33509ab4cc230800e6.jpg",
+    "static/media/8.jpg": "/github.io/grayscale-react-website/static/media/8.c545939636ec59f0d7e2.jpg",
+    "static/media/12.jpg": "/github.io/grayscale-react-website/static/media/12.b69e0ead5aa523e6dc1d.jpg",
+    "static/media/6.jpg": "/github.io/grayscale-react-website/static/media/6.ffa7bb0fde7304119575.jpg",
+    "index.html": "/github.io/grayscale-react-website/index.html",
+    "main.256ded41.css.map": "/github.io/grayscale-react-website/static/css/main.256ded41.css.map",
+    "main.29cad755.js.map": "/github.io/grayscale-react-website/static/js/main.29cad755.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.256ded41.css",
+    "static/js/main.29cad755.js"
+  ]
+}
